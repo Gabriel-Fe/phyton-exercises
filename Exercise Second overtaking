@@ -1,0 +1,13 @@
+
+'''in this exercise, the user types the time that 2 different pilots take on a lap of a race, the program calculates in how many laps are necessary for the fastest pilot
+to overtake his adversary for the second time''' 
+
+fast=int(input('type the time of the fastest pilot per lap: '))
+slow=int(input('type the time of the slowest pilot per lap: '))
+diflap=slow-fast
+curdif=diflap
+necelap=1
+while curdif<=slow:
+    curdif=curdif+diflap
+    necelap=necelap+1
+print('the 2° overtaking will happen at the: ', necelap, '° lap')

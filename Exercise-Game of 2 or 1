@@ -6,24 +6,24 @@ p1=0
 p2=0
 p3=0
 if p1==p2 and p2==p3:
-    recomecar=1
-while recomecar==1:
-    p1=int(input('Escolha entre 2 ou 1: '))
+    restart=1
+while restart==1:
+    p1=int(input('Choose between 2 or 1: '))
     p2=random.randrange(2)+1
     p3=random.randrange(2)+1
     print('Seu número:', p1)
-    print('Número do 2° jogador:', p2)
-    print('Número do 3° jogador:', p3)
+    print('2° player played:', p2)
+    print('3° player played:', p3)
     if p1 != p2 and p1 != p3:
-        print('Parabéns você ganhou!!')
-        recomecar=0
+        print('Congratulations, you've won!!')
+        restart=0
     elif p1 == p2 and p2 == p3:
-        print('Empate! Vamos denovo')
-        recomecar=1
+        print('That's a draw!! Let's try again')
+        restart=1
     else:
-        print('Você perdeu...')
+        print('You lost...')
         if p2 != p1 and p2 != p3:
-            print('O 2° jogador ganhou')
+            print('2° player won')
         else:
-            print('O 3° jogador ganhou')
-        recomecar=0
+            print('3° player won')
+        restart=0

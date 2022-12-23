@@ -1,0 +1,12 @@
+
+'''Nesse exercício, o usuário entrará com os tempos das voltas de 2 pilotos de corrida, então o programa descobrirá quantas voltas serão necessárias para que o piloto mais rápido ultrapasse o seu adversário pela 2° vez''' 
+
+mara=int(input('digite o tempo da volta do piloto mais rápido: '))
+male=int(input('digite o tempo da volta do piloto mais lento: '))
+difvolta=male-mara
+difatual=difvolta
+contvol=1
+while difatual<=male:
+    difatual=difatual+difvolta
+    contvol=contvol+1
+print('a 2° ultrapassagem acontecerá na: ', contvol, '° volta')
